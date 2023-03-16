@@ -17,7 +17,7 @@ function pdo_get_connection(){
  * @param array $args mảng giá trị cung cấp cho các tham số của $sql
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_execute($sql){
+function pdo_execute($sql){ 
     $sql_args = array_slice(func_get_args(), 1);
     try{
         $conn = pdo_get_connection();
@@ -31,7 +31,7 @@ function pdo_execute($sql){
         unset($conn);
     }
 }
-function pdo_execute_return_lastInsertID($sql){
+function pdo_execute_return_lastInsertID($sql){ 
     $sql_args = array_slice(func_get_args(), 1);
     try{
         $conn = pdo_get_connection();
@@ -53,7 +53,7 @@ function pdo_execute_return_lastInsertID($sql){
  * @return array mảng các bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_query($sql){
+function get_ALL($sql){ //getAll
     $sql_args = array_slice(func_get_args(), 1);
     try{
         $conn = pdo_get_connection();
@@ -76,7 +76,7 @@ function pdo_query($sql){
  * @return array mảng chứa bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_query_one($sql){
+function pdo_query_one($sql){ //getOne
     $sql_args = array_slice(func_get_args(), 1);
     try{
         $conn = pdo_get_connection();
