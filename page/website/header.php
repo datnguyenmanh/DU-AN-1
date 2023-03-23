@@ -9,7 +9,13 @@
 </head>
 
 <body>
-  admin page
+  <div class="row mb menu">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="index.php?url=contact">New</a></li>
+      <li><a href="index.php?url=product">Product</a></li>
+    </ul>
+  </div>
 </body>
 
 </html>

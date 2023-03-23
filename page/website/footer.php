@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  admin page
+  đây là footer
 </body>
 
 </html>

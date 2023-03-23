@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  admin page
+  <div>
+    contact
+  </div>
 </body>
 
 </html>
