@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="">
+            </a>
+            <ul id="menu">
+                <div class="item">
+                    <a href="#">Khuyến mại</a>
+                </div>
+                <div class="item">
+                    <a href="#">Thực đơn</a>
+                </div>
+                <div class="item">
+                    <a href="#">Theo dõi đơn hàng</a>
+                </div>
+                <div class="item">
+                    <a href="contact.html">Liên hệ</a>
+                </div>
+            </ul>
+            <div id="actions">
+                <div class="item">
+                    <a href="resgist.html">
+                        <i class="ti-user cart"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <i class="ti-shopping-cart cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="wrapper">
+                            <div class="row">
+                                <div class="contact">
+                                    <div class="dbox">
+                                        <div class="icon">
+                                            <span class="fa ti-location-pin"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Địa chỉ:</span> Cổng số 1, Tòa nhà FPT Polytechnic, phố Trịnh Văn Bô, phường Phương Canh, quận Nam Từ Liêm, TP Hà Nội</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="dbox">
+                                        <div class="icon">
+                                            <span class="fa ti-mobile"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>SĐT:</span> <a href="tel:02485820808">(024) 8582 0808</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="dbox">
+                                        <div class="icon">
+                                            <span class="fa ti-email"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">garanfpoly@gmail.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <div class="dbox">
+                                        <div class="icon">
+                                            <span class="fa ti-world"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Website</span> <a href="#">garanfpoly.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="contact-wrap">
+                                        <h3>Gửi tin nhắn cho chúng tôi</h3>
+                                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="name">Họ Và Tên</label>
+                                                        <input type="text" class="form-control" name="name" id="name"
+                                                            placeholder="Họ Và Tên">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="email">Email</label>
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="subject">Tiêu đề</label>
+                                                        <input type="text" class="form-control" name="subject" id="subject"
+                                                            placeholder="Tiêu đề">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="#">Nội dung</label>
+                                                        <textarea name="message" class="form-control" id="message" cols="30"
+                                                            rows="4" placeholder="Nội dung"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Gửi đi" class="btn btn-primary">
+                                                        <div class="submitting"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 order-md-first d-flex align-items-stretch">
+                                    <div id="map" class="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <h3>Nội dung</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="#">Khuyến mãi</a>
+                    </div>
+                    <div class="item">
+                        <a href="#">Thực đơn</a>
+                    </div>
+                    <div class="item">
+                        <a href="#">Theo dõi đơn hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="#">Về chúng tôi</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Contact</h3>
+                <form action="">
+                    <input type="text" placeholder="Email Address">
+                    <button>Nhận tin</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="end">
+            <p class="" style="color: white;">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> | This template is made with by Group 7</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
