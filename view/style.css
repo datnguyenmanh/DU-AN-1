@@ -15,7 +15,7 @@
 #header {
     width: 100%;
     line-height: 60px;
-    padding: 0 40px;
+    padding: 0 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,9 +28,30 @@
     top: 0;
 }
 
-#header .logo {
-    padding-top: 2px;
-    padding-left: 6%;
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar .navbar-brand:hover {
+    color: black;
 }
 
 #menu {
@@ -75,85 +96,94 @@
     color: black;
 }
 
-#banner {
-    width: 100%;
-    /* background: url("assets/banner.png") no-repeat 0 0 / cover; */
-    min-height: 470px;
-    display: flex;
-    padding: 0px 133px;
+/* thiết lập style cho slideshow container */
+.slideshow-container {
+    max-width: 1500px;
     position: relative;
-    clear: both;
+    margin: auto;
     margin-top: 110px;
-    top: 0px
 }
 
-#banner .box-left,
-#banner .box-right {
-    width: 50%;
+/* ẩn hình ảnh cho phần tử slideshow */
+.mySlides {
+    display: none;
 }
 
-#banner .box-left h2 {
-    font-size: 48px;
-    margin-top: 75px;
-    color: #fff;
+.slideshow-container .mySlides img {
+    border-radius: 5px 50px;
 }
 
-#banner .box-left p {
-    color: #D0D0D0;
+/* thiết kế nút mũi tên*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-size: 25px;
+    transition: 0.8s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-#banner .box-left button {
-    width: 191px;
-    height: 40px;
-    margin-top: 41px;
-    background: #1d1a1a;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: 0.4s;
+/* thiết kế nút mũi tên next nằm phía bên phải */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-#banner .box-left button:hover {
-    background: orange;
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+.prev:hover,
+.next:hover {
+    color: rgba(255, 125, 1, 0.5);
 }
 
-#banner .box-right {
-    padding-left: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* thiết lập style  nút tròn điều khiển*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-#banner .box-right img {
-    margin: 0px 10px;
-    animation: animation 3s infinite linear;
+.active,
+.dot:hover {
+    background-color: #ff7d01;
 }
 
-
-#banner .box-right img:nth-child(1) {
-    animation-delay: 0.5s;
+/* tạo hiệu ứng chuyển động fade */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-#banner .box-right img:nth-child(2) {
-
-    animation-delay: 1s;
-}
-
-@keyframes animation {
-    0% {
-        transform: translateY(0px);
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
     }
 
-    50% {
-        transform: translateY(-10px);
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
     }
 
-    100% {
-        transform: translateY(0px);
+    to {
+        opacity: 1
     }
-
 }
 
 #wp-products {
@@ -241,89 +271,6 @@
     height: 174px;
 }
 
-#saleoff {
-    width: 100%;
-    display: flex;
-    height: 322px;
-}
-
-#saleoff .box-left,
-#saleoff .box-right {
-    width: 50%;
-}
-
-#saleoff .box-left {
-    background: #3e413e;
-    text-align: center;
-    min-height: 322px;
-}
-
-#saleoff .box-left h1 {
-    padding-top: 38px;
-}
-
-#saleoff .box-right {
-    background-image: url("assets/off.png");
-}
-
-#comment {
-    width: 1012px;
-    height: 478px;
-    margin: 0px auto;
-    margin-top: 184px;
-    margin-bottom: 50px;
-}
-
-#comment h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 32px;
-    color: #626a67;
-}
-
-
-#comment-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 400px;
-    list-style: none;
-    overflow: hidden;
-}
-
-#list-comment {
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    transition: 0.5s;
-}
-
-#list-comment .item {
-    width: 100%;
-    height: 100%;
-    background: #362f2f;
-    border-radius: 20px;
-    padding-top: 50px;
-}
-
-#list-comment .item .avatar {
-    text-align: center;
-    margin-top: 13px;
-}
-
-#list-comment .item .name {
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-}
-
-#list-comment .item .text {
-    padding: 20px 50px;
-    color: #fff;
-
-}
-
 .ftco-footer {
     font-size: 16px;
     padding-top: 10px;
@@ -341,6 +288,10 @@
     font-weight: 500;
 }
 
+.ftco-footer .ftco-footer-widget .logo {
+    text-transform: uppercase;
+}
+
 .ftco-footer .ftco-footer-widget h2 a {
     text-decoration: none;
 }
@@ -353,6 +304,10 @@
 .ftco-footer .ftco-footer-widget ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+.ftco-footer .ftco-footer-widget ul li a:hover {
+    color: #000;
 }
 
 .ftco-footer .ftco-footer-widget ul li a span {
@@ -416,10 +371,6 @@
     transform: translate(-50%, -50%);
 }
 
-.ftco-footer-social li a:hover {
-    color: #fff;
-}
-
 .block-23 ul {
     padding: 0;
 }
@@ -433,6 +384,11 @@
     display: table;
     line-height: 1.5;
     margin-bottom: 15px;
+}
+
+.block-23 ul li .text:hover {
+    color: #000;
+    cursor: pointer;
 }
 
 .block-23 ul li span {
@@ -454,96 +410,6 @@
 
 .mr-2 {
     margin-right: 0.5rem !important;
-}
-
-/* thiết lập style cho slideshow container */
-.slideshow-container {
-    max-width: 1500px;
-    position: relative;
-    margin: auto;
-    margin-top: 110px;
-}
-
-/* ẩn hình ảnh cho phần tử slideshow */
-.mySlides {
-    display: none;
-}
-
-.slideshow-container .mySlides img {
-    border-radius: 5px 50px;
-}
-
-/* thiết kế nút mũi tên*/
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-size: 25px;
-    transition: 0.8s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* thiết kế nút mũi tên next nằm phía bên phải */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
-.prev:hover,
-.next:hover {
-    background-color: rgba(255, 125, 1, 0.5);
-}
-
-/* thiết lập style  nút tròn điều khiển*/
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 4px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #ff7d01;
-}
-
-/* tạo hiệu ứng chuyển động fade */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
 }
 
 /* contact */
@@ -774,4 +640,3 @@ label {
         height: 300px;
     }
 }
-
