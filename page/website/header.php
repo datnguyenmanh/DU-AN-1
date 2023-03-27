@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="row mb menu">
-    <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="index.php?url=contact">New</a></li>
-      <li><a href="index.php?url=product">Product</a></li>
+<div class="row mb menu">
+  <div id="header">
+    <a href="index.php" class="logo">
+      <img src="assets/logo.png" alt="">
+    </a>
+    <ul id="menu">
+      <div class="item">
+        <a href="index.php?url=contact">Khuyến mại</a>
+      </div>
+      <div class="item">
+        <a href="index.php?url=product">Thực đơn</a>
+      </div>
+      <div class="item">
+        <a href="#">Theo dõi đơn hàng</a>
+      </div>
     </ul>
+    <div id="actions">
+      <div class="item">
+        <a href="resgist.html">
+          <i class="ti-user cart"></i>
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          <i class="ti-shopping-cart cart"></i>
+        </a>
+      </div>
+    </div>
   </div>
-</body>
 
-</html>
+</div>
